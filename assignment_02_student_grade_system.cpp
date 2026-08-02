@@ -45,4 +45,36 @@
 
 #include <iostream>
 using namespace std;
-
+char getgrade(int num) {
+ if (100<num||num<0) {
+     return '\0';
+ }
+        if (num>=80) {
+            return 'A';
+        }
+        else if (num>=70) {
+            return 'B';
+        }
+         else if (num>=60) {
+            return'C';
+        }
+         else if (num>=50) {
+            return'D';
+        }
+         else {
+             return'F';
+         }
+    }
+int main() {
+    int num;
+    cout<<"Enter your score: ";
+    cin>>num;
+    char grade;
+    grade = getgrade(num);
+    if (grade == '\0') {
+        cout << "INVALID INPUT"<<endl;
+    }
+    else {
+        cout<<"grade:"<< grade<<endl;
+    }
+}
